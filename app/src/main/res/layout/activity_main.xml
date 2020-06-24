@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"/>
+
+    <iammert.com.library.ConnectionStatusView
+        android:id="@+id/status"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:dismissOnComplete="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:padding="5dp"
+        android:layout_alignParentBottom="true">
+
+        <View
+            android:id="@+id/line"
+            android:layout_centerHorizontal="true"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:layout_toStartOf="@+id/line"
+            android:id="@+id/complete"
+            android:layout_margin="5dp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/bg_button"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="complete" />
+
+        <Button
+            android:layout_toStartOf="@+id/line"
+            android:layout_below="@+id/complete"
+            android:id="@+id/error"
+            android:layout_margin="5dp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/bg_button"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="error" />
+
+        <Button
+            android:layout_toEndOf="@+id/line"
+            android:id="@+id/loading"
+            android:layout_margin="5dp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/bg_button"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="loading" />
+
+        <Button
+            android:layout_toEndOf="@+id/line"
+            android:layout_below="@+id/loading"
+            android:id="@+id/idle"
+            android:layout_margin="5dp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/bg_button"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="idle" />
+    </RelativeLayout>
+</RelativeLayout>
